@@ -1,6 +1,6 @@
 //Desenvolva um algoritmo capaz de lê um valor X informado pelo usuário. Em seguida, calcular a raiz quadrada e a potência do número informado.
 programa {
-  inclua biblioteca Matematica --> mat // error biblioteca não exites porem quando removo fala que falta esta biblioteca
+  inclua biblioteca Matematica --> mat 
   funcao inicio() {
     real x, y, z, raiz, pontencia
   
