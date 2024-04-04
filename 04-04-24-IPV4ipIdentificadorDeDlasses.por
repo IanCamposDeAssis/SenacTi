@@ -3,21 +3,29 @@ programa
 {	
 	funcao inicio()
 	{
-		real octeto
+		inteiro octeto, octetoA, octetoB, octetoC
 
 escreva("\n---------Leitura de variáveis-------------\n")		
 		escreva("Olá digite o primeiro octeto do IPV4: ")
 		leia(octeto)
+		escreva("Olá digite o segundo octeto do IPV4: ")
+		leia(octetoA)
+		escreva("Olá digite o terceiro octeto do IPV4: ")
+		leia(octetoB)
+		escreva("Olá digite o quarto octeto do IPV4: ")
+		leia(octetoC)
 
 escreva("\n---------Saída de dados-------------\n")
 escreva("\n---------Início do SE(){}-------------\n")
 		se(octeto >= 1 e octeto <= 127){
-			escreva("Olá, o IPV4 que começa com: "+octeto+" [é IPV4 classe A com a máscara 255.0.0.0] \n")
+			escreva("Olá, o IPV4 que começa com: " + octeto + " [é IPV4 classe A com a máscara 255.0.0.0] \n")
 			}se(octeto >= 128 e octeto <= 191 ){
-				escreva("Olá, o IPV4 que começa com: "+octeto+" [é IPV4 classe B com a máscara 255.0.0.0] \n")	
+				escreva("Olá, o IPV4 que começa com: " + octeto + " [é IPV4 classe B com a máscara 255.0.0.0] \n")	
 				}se(octeto >= 192 e octeto <= 223 ){
-					escreva("Olá, o IPV4 que começa com: "+octeto+" [é IPV4 classe C com a máscara 255.0.0.0] \n")
-					}
+					escreva("Olá, o IPV4 que começa com: " + octeto + " [é IPV4 classe C com a máscara 255.0.0.0] \n")
+					}se(octeto > 223 ou octeto < 0){
+						escreva("IPV4 INVÁLIDO " + octeto)
+						}
 escreva("\n---------FIM DO CÓDIGO-------------\n")
 	}
 }
