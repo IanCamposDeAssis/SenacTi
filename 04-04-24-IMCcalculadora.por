@@ -1,20 +1,24 @@
 //calculo do imc corporal
 programa
 {
+
+	inclua biblioteca Matematica --> mat
 	
 	funcao inicio()
 	{
 		real kg, metros, imc
+		real arredondamento
 
 escreva("\n---------Leitura de variáveis-------------\n")		
 		escreva("Olá digite seu peso em Kg: ")
 		leia(kg)
 		escreva("Olá digite sua altura em metros: ")
 		leia(metros)
-
+escreva("\n---------Atribuido formula para a var imc e arrendondando a saída-------------\n")
 		imc = kg/(metros*metros)
-
-		escreva("O seu peso de " + kg +"Kg\n"+"A sua altura é de " + metros +"M\n"+ "O seu IMC é: " + imc+"\n")
+		arredondamento = mat.arredondar(imc, 2)
+escreva("\n---------Saída de dados-------------\n")
+		escreva("O seu peso de " + kg +"Kg\n"+"A sua altura é de " + metros +"M\n"+ "O seu IMC é: " + arredondamento+"\n")
 
 escreva("\n---------Início do SE(){}-------------\n")
 		se(imc <= 18.5){
