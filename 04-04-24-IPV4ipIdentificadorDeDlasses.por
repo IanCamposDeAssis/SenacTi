@@ -49,6 +49,7 @@ programa
 			}senao{
 				in = falso
 				}
+// interposer1
 		// validando o segundo, terceiro e quarto octetos
 		se(octetoA >= 0 e octetoA <= 255){
 			validador[1] = verdadeiro
@@ -65,7 +66,7 @@ programa
 			}senao{
 				in = falso
 				}
-		
+// interposer2
 		se(octetoB >= 0 e octetoB <= 255){
 			validador[2] = verdadeiro
 			id = id + 1
@@ -81,6 +82,7 @@ programa
 			}senao{
 				in = falso
 				}
+// interposer3
 		
 		se(octetoC >= 0 e octetoC <= 255){
 			validador[3] = verdadeiro
@@ -96,7 +98,7 @@ programa
 			}senao{
 				in = falso
 				}
-
+// interposer4
 		validador[4] = in
 
 		escreva("\n---------DEBUG-------------\n")					
