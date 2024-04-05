@@ -5,7 +5,7 @@ programa
 		// declarar variáveis e vetor
 		inteiro octeto, octetoA, octetoB, octetoC, id = 0
 		logico validador[5], in
-		cadeia classe = "ola"
+		cadeia classe = "Inválido"
 
 		// leitura de variáveis
 		escreva("\n---------Leitura de variáveis-------------\n")		
