@@ -5,7 +5,7 @@ programa
 	funcao inicio()
 	{
 		inteiro seletor[2]
-		real valores[2], areaR=0, areaC=0, PeriR=0, PeriC=0
+		real valores[2], areaR=0.0, areaC=0.0, PeriR=0.0, PeriC=0.0
 
 		escreva("\n--------------Calculadora-de-formas------------\n")
 		escreva("Olá, para calcular o peímetro digite 1 ou 2 para área: ")
