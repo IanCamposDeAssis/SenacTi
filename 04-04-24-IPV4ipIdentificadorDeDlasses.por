@@ -3,42 +3,42 @@ programa
 	funcao inicio()
 	{
 		// declarar variáveis e vetor
-		inteiro octeto, octetoA, octetoB, octetoC, id = 0
+		inteiro octeto[4], id = 0
 		logico validador[5], in
 		cadeia classe = "Inválido"
 
 		// leitura de variáveis
 		escreva("\n---------Leitura de variáveis-------------\n")		
 		escreva("Olá, digite o primeiro octeto do IPV4: ")
-		leia(octeto)
+		leia(octeto[0])
 		escreva("Olá, digite o segundo octeto do IPV4: ")
-		leia(octetoA)
+		leia(octeto[1])
 		escreva("Olá, digite o terceiro octeto do IPV4: ")
-		leia(octetoB)
+		leia(octeto[2])
 		escreva("Olá, digite o quarto octeto do IPV4: ")
-		leia(octetoC)
+		leia(octeto[3])
 
 		// validar e definir classe pelo primeiro octeto
-		se(octeto >= 1 e octeto <= 127){
+		se(octeto[0] >= 1 e octeto[0] <= 127){
 			validador[0] = verdadeiro
 			id = id + 1
 			classe = "classe A e máscara 255.0.0.0"
 		}senao{
 			id = 0
 			}
-		se(octeto >= 128 e octeto <= 191){
+		se(octeto[0] >= 128 e octeto[0] <= 191){
 			validador[0] = verdadeiro
 			id = id + 1
 			classe = "classe B e máscara 255.255.0.0"
 		}senao{
 			id = 0
-			} se(octeto >= 192 e octeto <= 223){
+			} se(octeto[0] >= 192 e octeto[0] <= 223){
 			validador[0] = verdadeiro
 			id = id + 1
 			classe = "classe C e máscara 255.255.255.0"
 		}senao{
-			} se(octeto > 223 ou octeto < 0){
-			escreva("IPV4 INVÁLIDO " + octeto)
+			} se(octeto[0] > 223 ou octeto[0] < 0){
+			escreva("IPV4 INVÁLIDO " + octeto[0])
 			validador[0] = falso
 			id = 0
 		}					
@@ -51,7 +51,7 @@ programa
 				}
 // interposer1
 		// validando o segundo, terceiro e quarto octetos
-		se(octetoA >= 0 e octetoA <= 255){
+		se(octeto[1] >= 0 e octeto[1] <= 255){
 			validador[1] = verdadeiro
 			id = id + 1
 		}senao{
@@ -67,7 +67,7 @@ programa
 				in = falso
 				}
 // interposer2
-		se(octetoB >= 0 e octetoB <= 255){
+		se(octeto[2] >= 0 e octeto[2] <= 255){
 			validador[2] = verdadeiro
 			id = id + 1
 		}senao{
@@ -84,7 +84,7 @@ programa
 				}
 // interposer3
 		
-		se(octetoC >= 0 e octetoC <= 255){
+		se(octeto[3] >= 0 e octeto[3] <= 255){
 			validador[3] = verdadeiro
 			id = id + 1
 		}senao{
@@ -103,14 +103,14 @@ programa
 
 		escreva("\n---------DEBUG-------------\n")					
 		// saída debug
-		escreva(octeto , " faz parte de um octeto ", validador[0]," e é da " , classe,"\n")	
-		escreva(octetoA , " faz parte de um octeto ", validador[1],"\n")
-		escreva(octetoB , " faz parte de um octeto ", validador[2],"\n")	
-		escreva(octetoC , " faz parte de um octeto ", validador[3],"\n")	
+		escreva(octeto[0] , " faz parte de um octeto ", validador[0]," e é da " , classe,"\n")	
+		escreva(octeto[1] , " faz parte de um octeto ", validador[1],"\n")
+		escreva(octeto[2] , " faz parte de um octeto ", validador[2],"\n")	
+		escreva(octeto[3] , " faz parte de um octeto ", validador[3],"\n")	
 
 		escreva("\n---------Resultado-------------\n")
 		// saída para usuário
-		escreva("O IPV4 digitado: " + octeto +"."+ octetoA +"."+ octetoB +"."+ octetoC + " é de "+ classe + " e é um IPV4 " + validador[4] )
+		escreva("O IPV4 digitado: " + octeto[0] +"."+ octeto[1] +"."+ octeto[2] +"."+ octeto[3] + " é de "+ classe + " e é um IPV4 " + validador[4] )
 
 		escreva("\n---------FIM DO CÓDIGO-------------\n")
 	}
